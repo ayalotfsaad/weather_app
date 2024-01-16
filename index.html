@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="site">
+        <div class="site-contant">
+            <div class="site-header py-5 bg-dark">
+                <div class="container d-flex justify-content-between align-items-center">
+                
+                        <a href="./index.html" class="text-decoration-none branding d-flex justify-content-start align-items-center ">
+                            <img src="./assets/logo.png" alt="logo" class="logo">
+                            <div class="logo-type px-4">
+                                <h1 class="fs-6 text-white">Weather</h1>
+                                <span class="site-description  ">tagline goes here</span>
+                            </div>
+                        </a>
+                        <div class="main-navigation">
+                            <button type="button" class="menu-toggle" id="toggle">
+                                <i class="fa fa-bars"></i>
+                            </button>
+    
+                            <div class="navigation " id="mainMenu">
+                                <ul class="menu-main d-flex justify-content-evenly align-items-center  mx-5">
+                                    <li class="menu-item current-menu-item mx-3 "><a href="./index.html" class="nav-link active">Home</a></li>
+                                    <li class="menu-item mx-3"><a href="./side.html" class="nav-link">News</a></li>
+                                    <li class="menu-item mx-3"><a href="./side.html" class="nav-link">Live cameras</a></li>
+                                    <li class="menu-item mx-3"><a href="./side.html" class="nav-link">Photos</a></li>
+                                    <li class="menu-item mx-3"><a href="./contact.html" class="nav-link">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="container main-navigation sideMenu " id="sideMenu"  >
+                    <ul class="menu mt-4  toggle">
+                        <li class="menu-item current-menu-item text-center text-primary">Home</li>
+                        <li class="menu-item text-center">News</li>
+                        <li class="menu-item text-center">Live cameras</li>
+                        <li class="menu-item text-center">Photos</li>
+                        <li class="menu-item text-center ">Contact</li>
+                    </ul>
+                </div>
+            </div>
+      
+        </div>
+        <!-- header end  -->
+       <div class="hero">
+        <div class="container">
+         <div class="find-location">
+            <input type="text" placeholder="Find your location..." id="search">
+            <input type="button" value="Find" id="submit">
+         </div>
+         <div class="container py-2">
+            <div class="forecast-container py-5 d-lg-flex d-md-block">
+                
+             <!-- today  -->
+        <div class="today forecast border-3 "  >
+            <div class="forecast-header d-flex justify-content-between">
+                <div class=" p-3 daycolor" id="today"></div>
+                <div class="  p-3" >
+                    <span class="daycolor" id="day"></span>
+                    <span class="daycolor" id="dayNum"></span>
+                </div>
+                </div>
+            <div class="forecast-contant p-3">
+                <div class="location " id="location"></div>
+                <div class="degree d-flex justify-content-between py-4">
+                    <div class="num" > 
+                        <span id="temp"></span>
+                        <span ><sup>o</sup>C</span>
+
+                    </div>
+                  
+                    <div class="forecast-icon">
+                        <img src="" alt="" width="90" id="forcastIcone">
+                    </div>	
+                
+                </div>
+                <div class="custom text-primary fs-6 py-2" id="text"></div>
+                <span id="humidity"><img src="./assets/icon-umberella.png" alt="" class="px-2"></span>
+                <span class="px-3" id="wind"><img src="./assets/icon-wind.png" alt="" class="px-2"></span>
+                <span id="windDir"><img src="./assets/icon-compass.png" alt="" class="px-2"></span>
+            </div>
+           
+
+         </div>
+         <!-- forcast second day  -->
+         <div class="forecast middle border-3">
+            <div class="forecast-header">
+                <div class="day text-center p-3"></div>
+            </div>
+            <div class="forecast-content p-3 text-center">
+                <div class="forecast-icon py-4">
+                    <img src="https:${weather[i].forecast.forecastday[1].day.condition.icon}" alt="" width="48" class="icon-img">
+                </div>
+                <div class="degree fs-4 text-white fw-bolder"><span class="maxtemp"> </span><sup>o</sup>C</div>
+                <span class="text-white fw-bolder "><span class="mintemp"></span><sup>o</sup></span>
+                <div class="custom py-3 text-primary fs-6 nextDaytext"></div>
+            </div>
+         </div> 
+          <!-- forecast third day   -->
+          <div class="forecast last border-3">
+            <div class="forecast-header">
+                         <div class="day text-center p-3"></div>
+                     </div>
+                    <div class="forecast-content p-3 text-center">
+                         <div class="forecast-icon py-4">
+                            <img src="" class="icon-img" alt="" width="48">
+                          </div>
+                          <div class="degree fs-4 text-white fw-bolder"><span class="maxtemp"> </span><sup>o</sup>C</div>
+                          <span class="text-white fw-bolder "><span class="mintemp"></span><sup>o</sup></span>
+                          <div class="custom py-3 text-primary fs-6 nextDaytext"></div>
+
+                      </div>
+                         
+         </div>
+                 
+            </div>
+        
+    
+    
+    
+    
+        </div>
+       </div>
+    </div>
+     <!-- footer  -->
+     <div class="site-footer mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <form action="#" class="subscribe-form">
+                        <input type="text" placeholder="Enter your email to subscribe..." class="px-3">
+                        <input type="submit" value="Subscribe" class="pt-1">
+                    </form>
+
+                </div>
+                <div class="col-md-3 ">
+                    <div class="social-links d-flex justify-content-end align-items-center">
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text p-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js.map"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
